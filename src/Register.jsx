@@ -21,7 +21,7 @@ const Register = () => {
     const user = { username, password };
     users.push(user);
     localStorage.setItem('users', JSON.stringify(users));
-    window.location.href = '/dashboard';
+    window.location.href = '/login';
   };
 
   return (
@@ -105,6 +105,7 @@ const Register = () => {
                 <div className="col-12">
                   <div className="d-grid">
                     <button className="btn btn-primary btn-lg" type="submit">Sign up</button>
+                    {error && <p style={{ color: 'red' }}>{error}</p>}
                   </div>
                 </div>
               </div>

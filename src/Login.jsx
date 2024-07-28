@@ -91,6 +91,7 @@ const Login = () => {
                 <div className="col-12">
                   <div className="d-grid">
                     <button className="btn btn-primary btn-lg" type="submit">Sign in</button>
+                    {error && <p style={{ color: 'red' }}>{error}</p>}
                   </div>
                 </div>
               </div>
