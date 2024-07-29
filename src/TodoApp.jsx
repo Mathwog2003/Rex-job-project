@@ -21,13 +21,15 @@ const TodoApp = () => {
 
   const handleAddTodo = (event) => {
     event.preventDefault();
+
     const newTodoItem = {
       title: newTitle,
       text: newTodo,
       deadline: deadline,
-      createdAt: new Date().toISOString(),
+      createdAt: new Date().toString(),
       completed: false,
     };
+    
     setTodos([...todos, newTodoItem]);
     setNewTodo('');
     setNewTitle('');
